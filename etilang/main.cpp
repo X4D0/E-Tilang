@@ -3,12 +3,14 @@
 
 int main()
 {
-    cout << "Bentuk II - Contoh Relasi 1-N dan M-N" << endl;
-
     List_pol LP;
     List_pelanggar tertilang;
     adr_pol P;
     adr_pelanggar C;
+
+    cout << "Bentuk II - Contoh Relasi 1-N dan M-N" << endl;
+
+
 
     createList(LP);
 
@@ -22,14 +24,16 @@ int main()
     P = alokasiPolisi(4);
     insertFirst(LP, P);
 
-    cout<<"list parent"<<endl;
+    cout <<endl<< "-------------"<<endl;
+    cout<<"LIST PARENT"<<endl;
+    cout <<endl<< "-------------"<<endl;
     printInfo(LP);
 
     /** insert child */
 
-    createList(tertilang);
 
-    P = searchPol(LP, 7);
+
+    P = searchPol(LP,7);
     C = alokasiPelanggar("X");
     insertFirst(pelanggar(P),C);
     C = alokasiPelanggar("Q");
@@ -50,7 +54,9 @@ int main()
     insertAfter(pelanggar(P),C, R);
 
     cout<<"\n";
-    cout<<"list parent setelah diisi child"<<endl;
+    cout << "-----------------------------------"<<endl;
+    cout<<"LIST PARENT SETELAH DIISI PELANGGAR"<<endl;
+    cout << "-----------------------------------"<<endl;
     printInfo(LP);
     return 0;
 }

@@ -27,7 +27,7 @@ void insertFirst(List_pelanggar &L, adr_pelanggar P) {
 void printInfo(List_pelanggar L) {
     adr_pelanggar P = first(L);
     while(P !=NULL) {
-        cout<<"->"<<info(P)<<endl;
+        cout<<"  ->"<<info(P)<<"   ||"<<endl;
         P = next(P);
     }
 }

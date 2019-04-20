@@ -88,11 +88,22 @@ adr_pol searchPol(List_pol L, infotype_pol x){
 
 void printInfo(List_pol L){
     adr_pol P = first(L);
-    if(first(L)!=NULL) {
+    while (P != NULL){
+        if (first(L) != NULL){
+            cout << info(P) <<"       ||" <<endl;
+            //cout << "======================"<<endl;
+            printInfo(pelanggar(P));
+            cout << "========||"<<endl;
+            P = next(P);
+        }
+    }
+    /*if(first(L)!=NULL) {
         do {
             cout<<info(P)<<endl;
             printInfo(pelanggar(P));
             P = next(P);
         } while((P)!=first(L));
-    }
+    }*/
 }
+
+
