@@ -1,8 +1,10 @@
 #include "operate.h"
+#include "parent.h"
+#include "child.h"
 #include <conio.h>
 
-List_c Lc;
-List_p Lp;
+List_pelanggar Lc;
+List_pol Lp;
 List_r Lr;
 
 void menu()

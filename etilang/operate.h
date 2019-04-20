@@ -1,9 +1,9 @@
 #ifndef OPERATE_H_INCLUDED
 #define OPERATE_H_INCLUDED
 
-#include "child.h"
+/*#include "child.h"
 #include "parent.h"
-#include "relasi.h"
+#include "relasi.h"*/
 void menu();
 void insert_polisi();
 void insert_tilang();

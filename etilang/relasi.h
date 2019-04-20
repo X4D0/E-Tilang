@@ -16,8 +16,8 @@ typedef struct elmlist_r *adr_r;
 struct elmlist_r {
     adr_r next;
     adr_r prev;
-    adr_c tilang;
-    adr_p polisi;
+    adr_pelanggar tilang;
+    adr_pol polisi;
 };
 struct List_r {
     adr_r first;

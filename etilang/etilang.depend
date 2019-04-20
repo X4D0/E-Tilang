@@ -2,3 +2,34 @@
 1514140574 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\main.cpp
 	<iostream>
 
+1555745443 source:c:\users\user-pc\documents\github\e-tilang\etilang\main.cpp
+	"parent.h"
+	"child.h"
+
+1555547366 source:c:\users\user-pc\documents\github\e-tilang\etilang\operate.cpp
+	"operate.h"
+	<conio.h>
+
+1555600884 c:\users\user-pc\documents\github\e-tilang\etilang\operate.h
+	"parent.h"
+	"relasi.h"
+
+1555745180 c:\users\user-pc\documents\github\e-tilang\etilang\child.h
+	<iostream>
+
+1555744944 c:\users\user-pc\documents\github\e-tilang\etilang\parent.h
+	<iostream>
+	"child.h"
+
+1555600909 c:\users\user-pc\documents\github\e-tilang\etilang\relasi.h
+	"child.h"
+	"parent.h"
+	<iostream>
+
+1555769099 source:c:\users\user-pc\documents\github\e-tilang\etilang\parent.cpp
+	"child.h"
+	"parent.h"
+
+1555745443 source:c:\users\user-pc\documents\github\e-tilang\etilang\child.cpp
+	"child.h"
+

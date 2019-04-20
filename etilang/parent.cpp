@@ -1,21 +1,33 @@
+#include "child.h"
 #include "parent.h"
-void createList(List_p &L)
+
+void createList(List_pol &L)
 {
     first(L) = NULL;
 };
-void insertFirst(List_p &L, adr_p P)
+void insertFirst(List_pol &L, adr_pol P)
 {
-    next(P) = first(L);
-    first(L) = P;
-};
-void insertAfter(List_p &L, adr_p Prec, adr_p P)
+    if (P == NULL){
+        first(L) = P;
+    }else{
+        next(P) = first(L);
+        first(L) = P;
+    }
+}
+
+
+void insertAfter(List_pol &L, adr_pol Prec, adr_pol P){
+    if (P == NULL){
+        insertFirst(L,P);
+    }else{
+        next(P) = next(Prec);
+        next(Prec) = P;
+    }
+}
+
+void insertLast(List_pol &L, adr_pol P)
 {
-    next(P) = next(Prec);
-    next(Prec) = P;
-};
-void insertLast(List_p &L, adr_p P)
-{
-    address Q = first(L);
+    adr_pol Q = first(L);
     if(Q==NULL)
     {
         first(L) = P;
@@ -28,20 +40,59 @@ void insertLast(List_p &L, adr_p P)
         next(Q) = P;
     }
 };
-void deleteFirst(List_p &L, adr_p P)
+void deleteFirst(List_pol &L, adr_pol P)
 {
     if(first(L) != NULL){
         P = first(L);
         first(L) = next(P);
-        deallocate(P);
+        //deletePolisi(P);
         next(P) = NULL;
     }
 };
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233 */
 
-void deleteLast(List_p &L, adr_p &P);
-void deleteAfter(List_p &L, adr_p Prec, adr_p &P);
-adr_p allocateP(polisi x);
-void deallocateP(adr_p &P);
-adr_p searchPol(List_p L, polisi x);
-void printInfo(List_p L);
+void deleteLast(List_pol &L, adr_pol &P){
+
+}
+
+
+void deleteAfter(List_pol &L, adr_pol Prec, adr_pol &P){
+
+}
+
+
+
+adr_pol alokasiPolisi(infotype_pol x){
+    adr_pol P;
+    P = new elmlist_pol;
+    info(P) = x;
+    next(P) = NULL;
+    createList(pelanggar(P));
+    return P;
+}
+
+void deallocateP(adr_pol &P){
+    delete P;
+}
+
+adr_pol searchPol(List_pol L, infotype_pol x){
+    adr_pol P = first(L);
+    do {
+        if(info(P) == x) {
+            return P;
+        }
+        P = next(P);
+    } while(P != first(L));
+    return NULL;
+}
+
+void printInfo(List_pol L){
+    adr_pol P = first(L);
+    if(first(L)!=NULL) {
+        do {
+            cout<<info(P)<<endl;
+            printInfo(pelanggar(P));
+            P = next(P);
+        } while((P)!=first(L));
+    }
+}
