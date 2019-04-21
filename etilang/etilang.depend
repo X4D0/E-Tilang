@@ -2,7 +2,7 @@
 1514140574 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\main.cpp
 	<iostream>
 
-1555776668 source:c:\users\user-pc\documents\github\e-tilang\etilang\main.cpp
+1555851695 source:c:\users\user-pc\documents\github\e-tilang\etilang\main.cpp
 	"parent.h"
 	"child.h"
 
@@ -14,10 +14,10 @@
 	"parent.h"
 	"relasi.h"
 
-1555776742 c:\users\user-pc\documents\github\e-tilang\etilang\child.h
+1555803580 c:\users\user-pc\documents\github\e-tilang\etilang\child.h
 	<iostream>
 
-1555776897 c:\users\user-pc\documents\github\e-tilang\etilang\parent.h
+1555801535 c:\users\user-pc\documents\github\e-tilang\etilang\parent.h
 	<iostream>
 	"child.h"
 
@@ -26,10 +26,10 @@
 	"parent.h"
 	<iostream>
 
-1555776336 source:c:\users\user-pc\documents\github\e-tilang\etilang\parent.cpp
+1555803156 source:c:\users\user-pc\documents\github\e-tilang\etilang\parent.cpp
 	"child.h"
 	"parent.h"
 
-1555776259 source:c:\users\user-pc\documents\github\e-tilang\etilang\child.cpp
+1555803580 source:c:\users\user-pc\documents\github\e-tilang\etilang\child.cpp
 	"child.h"
 

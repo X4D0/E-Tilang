@@ -1,7 +1,6 @@
 #ifndef CHILD_H_INCLUDED
 #define CHILD_H_INCLUDED
 #include <iostream>
-using namespace std;
 
 #define next(P) P->next
 #define prev(P) P->prev
@@ -9,7 +8,14 @@ using namespace std;
 #define last(L) L.last
 #define info(P) P->info
 
-typedef string infotype_pelanggar;
+using namespace std;
+
+typedef struct infotype_pelanggar{
+    string nama;
+    string kendaraan;
+    string no_kendaraan;
+};
+
 typedef struct elmlist_pelanggar *adr_pelanggar;
 struct elmlist_pelanggar {
     infotype_pelanggar info;
@@ -29,9 +35,9 @@ void insertLast(List_pelanggar &L, adr_pelanggar P);
 void deleteFirst(List_pelanggar &L, adr_pelanggar P);
 void deleteLast(List_pelanggar &L, adr_pelanggar &P);
 void deleteAfter(List_pelanggar &L, adr_pelanggar Prec, adr_pelanggar &P);
-adr_pelanggar alokasiPelanggar(infotype_pelanggar x);
+adr_pelanggar alokasiPelanggar(string nama, string kendaraan, string no_kendaraan);
 void deallocatePelanggar(adr_pelanggar &P);
-adr_pelanggar searchNomor(List_pelanggar L, infotype_pelanggar x);
+adr_pelanggar searchNomor(List_pelanggar L, string x);
 void printInfo(List_pelanggar L);
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233
    Nama : Muhammad Afif Raihan ; NIM : 1301184220*/

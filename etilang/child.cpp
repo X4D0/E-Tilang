@@ -5,9 +5,11 @@ void createList(List_pelanggar &L) {
     last(L) = NULL;
 }
 
-adr_pelanggar alokasiPelanggar(infotype_pelanggar x) {
+adr_pelanggar alokasiPelanggar(string nama, string kendaraan, string no_kendaraan) {
     adr_pelanggar P = new elmlist_pelanggar;
-    info(P) = x;
+    info(P).nama = nama;
+    info(P).kendaraan = kendaraan;
+    info(P).no_kendaraan = no_kendaraan;
     next(P) = NULL;
     prev(P) = NULL;
     return P;
@@ -27,16 +29,18 @@ void insertFirst(List_pelanggar &L, adr_pelanggar P) {
 void printInfo(List_pelanggar L) {
     adr_pelanggar P = first(L);
     while(P !=NULL) {
-        cout<<"  ->"<<info(P)<<"   ||"<<endl;
+        cout<<"  ->"<<info(P).nama<<endl;
+        cout<<"     *"<<info(P).kendaraan<<endl;
+        cout<<"     *"<<info(P).no_kendaraan<<endl;
         P = next(P);
     }
 }
 
 
-adr_pelanggar searchNomor(List_pelanggar L, infotype_pelanggar x) {
+adr_pelanggar searchNomor(List_pelanggar L, string x) {
     adr_pelanggar P = first(L);
     while(P != NULL) {
-        if(info(P)==x) {
+        if(info(P).no_kendaraan == x) {
             return P;
         }
         P = next(P);

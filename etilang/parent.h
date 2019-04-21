@@ -31,6 +31,7 @@ adr_pol alokasiPolisi(infotype_pol x);
 void dealokasiPolisi(adr_pol &P);
 adr_pol searchPol(List_pol L, infotype_pol x);
 void printInfo(List_pol L);
-/* Nama : Rayhan Rahmanda ; NIM : 1301184233 */
+/* Nama : Rayhan Rahmanda ; NIM : 1301184233
+   Nama : Muhammad Afif Raiahn ; NIM : 1301184220*/
 
 #endif // PARENT_H_INCLUDED
