@@ -4,7 +4,6 @@
 int main()
 {
     List_pol LP;
-    List_pelanggar tertilang;
     adr_pol P;
     adr_pelanggar C;
 
@@ -15,13 +14,13 @@ int main()
     createList(LP);
 
     /** insert parent */
-    P = alokasiPolisi(3);
+    P = alokasiPolisi(12345);
     insertFirst(LP, P);
-    P = alokasiPolisi(7);
+    P = alokasiPolisi(67890);
     insertFirst(LP, P);
-    P = alokasiPolisi(2);
+    P = alokasiPolisi(54321);
     insertFirst(LP, P);
-    P = alokasiPolisi(4);
+    P = alokasiPolisi(19876);
     insertFirst(LP, P);
 
     cout <<endl<< "-------------"<<endl;
@@ -33,25 +32,25 @@ int main()
 
 
 
-    P = searchPol(LP,7);
-    C = alokasiPelanggar("X");
+    P = searchPol(LP,12345);
+    C = alokasiPelanggar("Muhammad","MOBIL","B1234KK");
     insertFirst(pelanggar(P),C);
-    C = alokasiPelanggar("Q");
-    insertFirst(pelanggar(P),C);
-
-    P = searchPol(LP, 4);
-    C = alokasiPelanggar("A");
+    C = alokasiPelanggar("Muhammad","MOBIL","B1234KN");
     insertFirst(pelanggar(P),C);
 
-    P = searchPol(LP, 2);
-    C = alokasiPelanggar("A");
+    P = searchPol(LP, 67890);
+    C = alokasiPelanggar("Muhammad","MOBIL","B1234KM");
+    insertFirst(pelanggar(P),C);
+
+    P = searchPol(LP, 19876);
+    C = alokasiPelanggar("Muhammad","MOBIL","B1234KL");
     insertFirst(pelanggar(P),C);
 
 
-    P = searchPol(LP, 7);
-    C = searchNomor(pelanggar(P),"Q");
-    adr_pelanggar R = alokasiPelanggar("O");
-    insertAfter(pelanggar(P),C, R);
+    /*P = searchPol(LP, 7);
+    C = searchNomor(pelanggar(P),"B1234KK");
+    adr_pelanggar R = alokasiPelanggar("Afif","MOTOR","F3256RT");
+    insertAfter(pelanggar(P),C, R);*/
 
     cout<<"\n";
     cout << "-----------------------------------"<<endl;

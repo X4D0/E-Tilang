@@ -90,10 +90,10 @@ void printInfo(List_pol L){
     adr_pol P = first(L);
     while (P != NULL){
         if (first(L) != NULL){
-            cout << info(P) <<"       ||" <<endl;
+            cout <<endl<< info(P)<<endl;
             //cout << "======================"<<endl;
             printInfo(pelanggar(P));
-            cout << "========||"<<endl;
+            cout << "==================="<<endl;
             P = next(P);
         }
     }
