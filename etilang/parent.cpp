@@ -71,7 +71,11 @@ adr_pol alokasiPolisi(infotype_pol x){
     return P;
 }
 
+<<<<<<< HEAD
+void dealokasiPolisi(adr_pol &P){
+=======
 void deallocateP(adr_pol &P){
+>>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
     delete P;
 }
 
@@ -90,10 +94,17 @@ void printInfo(List_pol L){
     adr_pol P = first(L);
     while (P != NULL){
         if (first(L) != NULL){
+<<<<<<< HEAD
+            cout <<endl<< "No. Tilang "<<info(P)<<endl;
+            //cout << "======================"<<endl;
+            printInfo(pelanggar(P));
+            cout << "=============================="<<endl;
+=======
             cout <<endl<< info(P)<<endl;
             //cout << "======================"<<endl;
             printInfo(pelanggar(P));
             cout << "==================="<<endl;
+>>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
             P = next(P);
         }
     }

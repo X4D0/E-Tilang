@@ -2,6 +2,10 @@
 #define PARENT_H_INCLUDED
 #include <iostream>
 #include "child.h"
+<<<<<<< HEAD
+#include "cstdlib"
+=======
+>>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
 using  namespace std;
 
 #define first(L) L.first

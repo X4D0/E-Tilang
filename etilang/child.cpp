@@ -29,9 +29,15 @@ void insertFirst(List_pelanggar &L, adr_pelanggar P) {
 void printInfo(List_pelanggar L) {
     adr_pelanggar P = first(L);
     while(P !=NULL) {
+<<<<<<< HEAD
+        cout<<"\t Pelanggar : "<<info(P).nama<<endl;
+        cout<<"\t Kendaraan : "<<info(P).kendaraan<<endl;
+        cout<<"\t No. Kendaraan : "<<info(P).no_kendaraan<<endl;
+=======
         cout<<"  ->"<<info(P).nama<<endl;
         cout<<"     *"<<info(P).kendaraan<<endl;
         cout<<"     *"<<info(P).no_kendaraan<<endl;
+>>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
         P = next(P);
     }
 }
