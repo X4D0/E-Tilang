@@ -2,10 +2,7 @@
 #define PARENT_H_INCLUDED
 #include <iostream>
 #include "child.h"
-<<<<<<< HEAD
 #include "cstdlib"
-=======
->>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
 using  namespace std;
 
 #define first(L) L.first
@@ -35,7 +32,10 @@ adr_pol alokasiPolisi(infotype_pol x);
 void dealokasiPolisi(adr_pol &P);
 adr_pol searchPol(List_pol L, infotype_pol x);
 void printInfo(List_pol L);
+
+/**CASE**/
+int jumlahPelanggaran(List_pol L);
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233
-   Nama : Muhammad Afif Raiahn ; NIM : 1301184220*/
+   Nama : Muhammad Afif Raihan ; NIM : 1301184220*/
 
 #endif // PARENT_H_INCLUDED

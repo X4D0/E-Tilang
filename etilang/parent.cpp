@@ -14,8 +14,6 @@ void insertFirst(List_pol &L, adr_pol P)
         first(L) = P;
     }
 }
-
-
 void insertAfter(List_pol &L, adr_pol Prec, adr_pol P){
     if (P == NULL){
         insertFirst(L,P);
@@ -52,12 +50,18 @@ void deleteFirst(List_pol &L, adr_pol P)
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233 */
 
 void deleteLast(List_pol &L, adr_pol &P){
-
+    adr_pol Q = first(L);
+    while(next(Q) != P){
+        Q = next(Q);
+    }
+    next(Q) = NULL;
+    dealokasiPolisi(P);
 }
 
 
 void deleteAfter(List_pol &L, adr_pol Prec, adr_pol &P){
-
+    next(P) = next(Prec);
+    next(Prec) = P;
 }
 
 
@@ -71,11 +75,7 @@ adr_pol alokasiPolisi(infotype_pol x){
     return P;
 }
 
-<<<<<<< HEAD
 void dealokasiPolisi(adr_pol &P){
-=======
-void deallocateP(adr_pol &P){
->>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
     delete P;
 }
 
@@ -92,29 +92,30 @@ adr_pol searchPol(List_pol L, infotype_pol x){
 
 void printInfo(List_pol L){
     adr_pol P = first(L);
-    while (P != NULL){
+    while ((P != NULL)&&(info(P)<99999)){
         if (first(L) != NULL){
-<<<<<<< HEAD
             cout <<endl<< "No. Tilang "<<info(P)<<endl;
-            //cout << "======================"<<endl;
             printInfo(pelanggar(P));
-            cout << "=============================="<<endl;
-=======
-            cout <<endl<< info(P)<<endl;
-            //cout << "======================"<<endl;
-            printInfo(pelanggar(P));
-            cout << "==================="<<endl;
->>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
+            cout << "================================"<<endl;
             P = next(P);
         }
     }
-    /*if(first(L)!=NULL) {
-        do {
-            cout<<info(P)<<endl;
-            printInfo(pelanggar(P));
-            P = next(P);
-        } while((P)!=first(L));
-    }*/
 }
+/* Nama : Muhammad Afif Raihan ; NIM : 1301184220 */
 
+int jumlahPelanggaran(List_pol L)
+{
+    int banyak = 0;
+    adr_pol P = first(L);
+    while(P!=NULL)
+    {
+        if(first(L)!=NULL)
+        {
+            banyak++;
+            P = next(P);
+        }
+    }
+    return banyak;
+}
+/* Nama : Rayhan Rahmanda ; NIM : 1301184233 */
 

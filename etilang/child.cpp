@@ -29,19 +29,12 @@ void insertFirst(List_pelanggar &L, adr_pelanggar P) {
 void printInfo(List_pelanggar L) {
     adr_pelanggar P = first(L);
     while(P !=NULL) {
-<<<<<<< HEAD
         cout<<"\t Pelanggar : "<<info(P).nama<<endl;
         cout<<"\t Kendaraan : "<<info(P).kendaraan<<endl;
         cout<<"\t No. Kendaraan : "<<info(P).no_kendaraan<<endl;
-=======
-        cout<<"  ->"<<info(P).nama<<endl;
-        cout<<"     *"<<info(P).kendaraan<<endl;
-        cout<<"     *"<<info(P).no_kendaraan<<endl;
->>>>>>> 9937d66c88886a7abfdf5c73005fb3318c42216d
         P = next(P);
     }
 }
-
 
 adr_pelanggar searchNomor(List_pelanggar L, string x) {
     adr_pelanggar P = first(L);
@@ -53,6 +46,7 @@ adr_pelanggar searchNomor(List_pelanggar L, string x) {
     }
     return NULL;
 }
+/* Nama : Muhammad Afif Raihan ; NIM : 1301184220 */
 
 void insertAfter(List_pelanggar &L, adr_pelanggar Prec, adr_pelanggar P) {
     prev(next(Prec)) = P;
@@ -60,3 +54,43 @@ void insertAfter(List_pelanggar &L, adr_pelanggar Prec, adr_pelanggar P) {
     prev(P) = Prec;
     next(Prec) = P;
 }
+
+void insertLast(List_pelanggar &L, adr_pelanggar P)
+{
+    adr_pelanggar Q = first(L);
+    if(Q==NULL)
+    {
+        first(L) = P;
+    }else
+    {
+        while (next(Q)!=NULL)
+        {
+            Q = next(Q);
+        }
+        next(Q) = P;
+    }
+};
+void deleteFirst(List_pelanggar &L, adr_pelanggar P)
+{
+    if(first(L) != NULL){
+        P = first(L);
+        first(L) = next(P);
+        next(P) = NULL;
+    }
+};
+
+void deleteLast(List_pelanggar &L, adr_pelanggar &P){
+    adr_pelanggar Q = first(L);
+    while(next(Q) != P){
+        Q = next(Q);
+    }
+    next(Q) = NULL;
+    delete(P);
+}
+
+
+void deleteAfter(List_pelanggar &L, adr_pelanggar Prec, adr_pelanggar &P){
+    next(P) = next(Prec);
+    next(Prec) = P;
+}
+/* Nama : Rayhan Rahmanda ; NIM : 1301184233 */
