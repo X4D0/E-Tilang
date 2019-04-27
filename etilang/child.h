@@ -11,9 +11,12 @@
 using namespace std;
 
 typedef struct infotype_pelanggar{
+    int no_tilang;
     string nama;
     string kendaraan;
     string no_kendaraan;
+    string kasus;
+    string denda;
 };
 
 typedef struct elmlist_pelanggar *adr_pelanggar;
@@ -35,10 +38,14 @@ void insertLast(List_pelanggar &L, adr_pelanggar P);
 void deleteFirst(List_pelanggar &L, adr_pelanggar P);
 void deleteLast(List_pelanggar &L, adr_pelanggar &P);
 void deleteAfter(List_pelanggar &L, adr_pelanggar Prec, adr_pelanggar &P);
-adr_pelanggar alokasiPelanggar(string nama, string kendaraan, string no_kendaraan);
-void deallocatePelanggar(adr_pelanggar &P);
-adr_pelanggar searchNomor(List_pelanggar L, string x);
+adr_pelanggar alokasiPelanggar(int no_tilang,string nama, string kendaraan, string no_kendaraan,string kasus,string denda);
+void dealokasiPelanggar(adr_pelanggar &P);
+adr_pelanggar searchNomor(List_pelanggar L, infotype_pelanggar x);
 void printInfo(List_pelanggar L);
+void deleteIni(List_pelanggar &L, adr_pelanggar prec, adr_pelanggar &dihapus);
+int jumlahmobil(List_pelanggar L);
+int jumlahmotor(List_pelanggar L);
+int jumlahPelanggaranSebulan(List_pelanggar L);
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233
    Nama : Muhammad Afif Raihan ; NIM : 1301184220*/
 
