@@ -42,6 +42,7 @@ int main()
         cout << "+\t4. Lihat Data Tilang              \t+" <<endl;
         cout << "+\t5. Jumlah Kendaraan yang di Tilang \t+" <<endl;
         cout << "+\t6. Jumlah Pelanggaran             \t+" <<endl;
+        cout << "+\t7. Ubah isi Data                  \t+" <<endl;
         cout << "+\t0. EXIT                           \t+" <<endl;
         cout << "+\t                                  \t+" <<endl;
         cout << "+==================TUBES 2019===================+" << endl;
@@ -151,6 +152,77 @@ int main()
             cout << "Banyak Pelanggaran Pada Tahun ini Adalah : ";
             cout << jumlahPelanggaran(LP) << " Kasus Pelanggaran"<<endl<<endl;
             printInfo(LP);
+            getche();
+            system("CLS");
+            break;
+        case 7:
+            cout<<"Masukkan Bulan Anda Tertilang : "; cin>>x;
+            cout << "Bulan ";
+            intToBulan(LP,x);
+            P = searchPol(LP,x);
+            cout<<"Masukkan Nomor Tilang Anda : "; cin>>y.no_tilang;
+            Q = searchNomor(pelanggar(P),y);
+            cout<<"-------Masukkan Pilihan yang ingin di Ubah-------"<<endl;
+            int pilih;
+            cout<<"1. Nama Pelanggar"<<endl;
+            cout<<"2. Jenis Kendaraan"<<endl;
+            cout<<"3. Nomor Kendaraan"<<endl;
+            cout<<"4. Kasus Pelanggaran"<<endl;
+            cout<<"Pilihan : "; cin>>pilih;
+            switch(pilih){
+            case 1 :    cout<<"Pelanggar : "; cin>>info(Q).nama; break;
+            case 2 :    cout<<"Kendaraan : "; cin>>info(Q).kendaraan; break;
+            case 3 :    cout<<"No. Kendaraan : "; cin>>info(Q).no_kendaraan; break;
+            case 4 :    cout <<"Kasus Pelanggaran : "<<endl;
+                            cout << "\t1. Tidak Pakai Helm " <<endl;
+                            cout << "\t2. Menerobos lampu merah   " <<endl;
+                            cout << "\t3. Surat-Surat Tidak Lengkap " <<endl;
+                            cout << "\t4. Melanggar Rambu Lalu Lintas  " <<endl;
+                            cout << "\t5. Penumpang Berlebih \t" <<endl;
+                            cout << "\t6. Bagian Kendaraan Tidak Lengkap " <<endl;
+                            cout << "\t7. Melawan Arus Lalu Lintas  " <<endl;
+                            cout << "\t0. Pelanggaran Lainya"<<endl;
+                            cout << "Masukkan Kasus Pelanggaran : ";
+                            cin >> no_kasus;
+                            switch(no_kasus){
+                            case 1:
+                                info(Q).kasus = "Tidak Pakai Helm";
+                                info(Q).denda = "300.000";
+                                break;
+                            case 2:
+                                info(Q).kasus = "Menerobos lampu merah";
+                                info(Q).denda = "500.000";
+                                break;
+                            case 3:
+                                info(Q).kasus = "Surat-Surat Tidak Lengkap";
+                                info(Q).denda = "1.000.000";
+                                break;
+                            case 4:
+                                info(Q).kasus = "Melanggar Rambu Lalu Lintas";
+                                info(Q).denda = "700.000";
+                                break;
+                            case 5:
+                                info(Q).kasus = "Penumpang Berlebih";
+                                info(Q).denda = "500.000";
+                                break;
+                            case 6:
+                                info(Q).kasus = "Bagian Kendaraan Tidak Lengkap";
+                                info(Q).denda = "1.000.000";
+                                break;
+                            case 7:
+                                info(Q).kasus = "Melawan Arus Lalu Lintas";
+                                info(Q).denda = "400.000";
+                                break;
+                            default :
+                                cout << "Masukan Kasus : ";
+                                cin >> kasus;
+                                cout << "Denda : Rp.";
+                                cin >>denda;
+                            }
+            }
+
+            C = alokasiPelanggar(no_tilang,nama,kendaraan,no_kendaraan,kasus,denda);
+            cout<<"Tekan Enter jika Telah Selesai..."<<endl;
             getche();
             system("CLS");
             break;

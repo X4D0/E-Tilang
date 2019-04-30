@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1556251276 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\main.cpp
+1556585850 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\main.cpp
 	<windows.h>
 	<conio.h>
 	<cstdlib>
@@ -54,10 +54,10 @@
 1556246382 source:c:\users\user-pc\documents\github\e-tilang\etilang\child.cpp
 	"child.h"
 
-1556359768 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\child.cpp
+1556585850 source:d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\child.cpp
 	"child.h"
 
-1556251276 d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\child.h
+1556585659 d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\child.h
 	<iostream>
 
 1556251276 d:\rayhan rahmanda\matkul\struktur data\e-tilang\etilang\parent.h

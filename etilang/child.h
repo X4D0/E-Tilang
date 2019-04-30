@@ -46,6 +46,7 @@ void deleteIni(List_pelanggar &L, adr_pelanggar prec, adr_pelanggar &dihapus);
 int jumlahmobil(List_pelanggar L);
 int jumlahmotor(List_pelanggar L);
 int jumlahPelanggaranSebulan(List_pelanggar L);
+void edit_data(List_pelanggar &L);
 /* Nama : Rayhan Rahmanda ; NIM : 1301184233
    Nama : Muhammad Afif Raihan ; NIM : 1301184220*/
 

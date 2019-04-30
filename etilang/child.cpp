@@ -188,5 +188,3 @@ int jumlahPelanggaranSebulan(List_pelanggar L){
     int Q = jumlahmotor(L);
     return P+Q;
 }
-
-
